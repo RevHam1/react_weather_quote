@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero {
+  display: flex;
+  height: 100vh;
+  background-color: black;
+}
+
+body {
+  padding: 2rem;
+  background-color: darkblue;
+  color: whitesmoke;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+div {
+  font-size: 2rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+p .italic-text {
+  font-style: italic;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+}
+
+input,
+button {
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.get-weather-button {
+  margin: 1.5rem;
+}
+
+.get-weather-button:hover {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #0056b3;
+}
+
+.city-input {
+  margin: 1rem;
+}
+
+/* Media Queries */
+
+/* Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+  div {
+    font-size: 1.5rem;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  p .italic-text {
+    font-size: 1.5rem;
+  }
+
+  input,
+  button {
+    font-size: 1.5rem;
+    padding: 0.75rem;
+  }
+}
+
+/* Medium devices (tablets, 601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  div {
+    font-size: 1.75rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  p .italic-text {
+    font-size: 1.75rem;
+  }
+
+  input,
+  button {
+    font-size: 1.75rem;
+    padding: 0.85rem;
+  }
+}
+
+/* Large devices (laptops/desktops, 901px and up) */
+@media (min-width: 901px) and (max-width: 1200px) {
+  div {
+    font-size: 1.9rem;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  p .italic-text {
+    font-size: 1.9rem;
+  }
+
+  input,
+  button {
+    font-size: 1.9rem;
+    padding: 0.9rem;
+  }
+}
+
+/* Extra large devices (large desktops, 1201px and up) */
+@media (min-width: 1201px) {
+  div {
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  p .italic-text {
+    font-size: 2rem;
+  }
+
+  input,
+  button {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+}
