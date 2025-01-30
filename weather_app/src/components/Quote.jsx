@@ -28,7 +28,7 @@ function Quote() {
               padding: "10px 10px",
               width: "1200px",
               color: "yellow",
-              fontSize: "36px",
+              fontSize: "32px",
             }}
           >
             &quot;{quote.content}&quot;

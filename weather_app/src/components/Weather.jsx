@@ -1,15 +1,66 @@
 // import axios from "axios";
-// import { useState } from "react";
+// import { useEffect, useState } from "react";
 // import Quote from "./Quote";
 // import Reset from "./Reset";
-// import "./Weather.css"; // Import the CSS file
-// // import weatherBG from "./weatherBG.png";
+// import "./Weather.css";
+
+// import Image from "../images/blueblend.webp";
+// import Image18 from "../images/chilling.jpeg";
+// import Image14 from "../images/cityday.jpg";
+// import Image15 from "../images/citynight.jpg";
+// import Image13 from "../images/citysky.jpg";
+// import Image1 from "../images/darkblend.webp";
+// import Image3 from "../images/darkshy.avif";
+// import Image10 from "../images/darksky.jpg";
+// import Image20 from "../images/idontknor.webp";
+// import Image17 from "../images/lookup.jpg";
+// import Image19 from "../images/maybetommorrow.webp";
+// import Image2 from "../images/mountains.avif";
+// import Image11 from "../images/orangesky.jpg";
+// import Image4 from "../images/orangewbox.jpg";
+// import Image5 from "../images/purple.webp";
+// import Image6 from "../images/reddelta.avif";
+// import Image7 from "../images/staelite.avif";
+// import Image16 from "../images/umbrellas.jpeg";
+// import Image8 from "../images/violrttTop.jpg";
+// import Image12 from "../images/weather.jpg";
+// import Image9 from "../images/weatherBG.png";
+
+// const images = [
+//   Image,
+//   Image1,
+//   Image2,
+//   Image3,
+//   Image4,
+//   Image5,
+//   Image6,
+//   Image7,
+//   Image8,
+//   Image9,
+//   Image10,
+//   Image11,
+//   Image12,
+//   Image13,
+//   Image14,
+//   Image15,
+//   Image16,
+//   Image17,
+//   Image18,
+//   Image19,
+//   Image20,
+// ];
 
 // function WeatherApp() {
 //   const [city, setCity] = useState("");
 //   const [weatherInfo, setWeatherInfo] = useState(null);
+//   const [backgroundImage, setBackgroundImage] = useState(images[0]);
 
 //   const apiKey = import.meta.env.VITE_API_KEY;
+
+//   useEffect(() => {
+//     const randomIndex = Math.floor(Math.random() * images.length);
+//     setBackgroundImage(images[randomIndex]);
+//   }, []);
 
 //   const getWeatherData = async () => {
 //     try {
@@ -41,7 +92,17 @@
 //   };
 
 //   return (
-//     <section className=".hero">
+//     <section
+//       className="hero"
+//       style={{
+//         backgroundImage: `url(${backgroundImage})`,
+//         backgroundSize: "cover",
+//         backgroundPosition: "center",
+//         backgroundRepeat: "no-repeat",
+//         width: "100%",
+//         height: "100vh",
+//       }}
+//     >
 //       <div>
 //         <h1>Get Weather Conditions</h1>
 
@@ -58,7 +119,7 @@
 //           style={{
 //             padding: "10px 10px",
 //             with: "1200px",
-//             fontSize: "30px",
+//             fontSize: "32px",
 //           }}
 //         />
 
@@ -72,12 +133,11 @@
 //                 <p>
 //                   {weatherInfo.description} and {weatherInfo.temperature}°F
 //                 </p>
-//                 {/* <p>Description: {weatherInfo.description}</p> */}
 //                 <p>Feels Like: {weatherInfo.feels_like}°F</p>
-//                 <img
+//                 {/* <img
 //                   src={`http://openweathermap.org/img/w/${weatherInfo.icon}.png`}
 //                   alt={weatherInfo.description}
-//                 />
+//                 /> */}
 //               </div>
 //             )}
 //           </div>
@@ -191,12 +251,21 @@ function WeatherApp() {
         backgroundImage: `url(${backgroundImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
         width: "100%",
         height: "100vh",
       }}
     >
       <div>
         <h1>Get Weather Conditions</h1>
+        <p
+          style={{
+            padding: "10px 10px",
+            width: "1200px",
+          }}
+        >
+          The Conditions Always Change
+        </p>
 
         <input
           type="text"
@@ -207,29 +276,46 @@ function WeatherApp() {
         />
         <button onClick={getWeatherData}>Get Weather</button>
 
-        <Quote
-          style={{
-            padding: "10px 10px",
-            with: "1200px",
-            fontSize: "36px",
-          }}
-        />
+        {!weatherInfo && (
+          <Quote
+            style={{
+              padding: "10px 10px",
+              width: "1200px",
+              fontSize: "36px",
+            }}
+          />
+        )}
 
         {weatherInfo && (
           <div>
             {weatherInfo.error ? (
               <p>{weatherInfo.error}</p>
             ) : (
-              <div>
-                <h3>Forecast for {weatherInfo.city}</h3>
-                <p>
+              <div
+                style={{
+                  padding: "10px 10px",
+                  width: "1200px",
+                }}
+              >
+                <h2>Forecast for {weatherInfo.city}</h2>
+                <p
+                  style={{
+                    fontSize: "30px",
+                  }}
+                >
                   {weatherInfo.description} and {weatherInfo.temperature}°F
                 </p>
-                {/* <p>Description: {weatherInfo.description}</p> */}
-                <p>Feels Like: {weatherInfo.feels_like}°F</p>
+                <p
+                  style={{
+                    fontSize: "26px",
+                  }}
+                >
+                  Feels Like: {weatherInfo.feels_like}°F
+                </p>
                 <img
                   src={`http://openweathermap.org/img/w/${weatherInfo.icon}.png`}
                   alt={weatherInfo.description}
+                  style={{ width: "100px", height: "100px" }}
                 />
               </div>
             )}
