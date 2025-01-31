@@ -297,7 +297,13 @@ function WeatherApp() {
                   width: "1200px",
                 }}
               >
-                <h2>Forecast for {weatherInfo.city}</h2>
+                <h2
+                  style={{
+                    fontStyle: "italic",
+                  }}
+                >
+                  Forecast for {weatherInfo.city}...
+                </h2>
                 <p
                   style={{
                     fontSize: "30px",
