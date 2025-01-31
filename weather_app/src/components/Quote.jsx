@@ -39,8 +39,9 @@ function QuoteComponent() {
           style={{
             fontStyle: "italic",
             padding: "10px 10px",
-            width: "1200px",
+            width: "1180px",
             color: "yellow",
+            textShadow: "2px 2px 4px black",
             fontSize: "32px",
           }}
         >
