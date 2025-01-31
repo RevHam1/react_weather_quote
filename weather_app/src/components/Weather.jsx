@@ -261,6 +261,8 @@ function WeatherApp() {
           style={{
             marginTop: "20px",
             padding: "10px 10px",
+            color: "white",
+            textShadow: "2px 2px 4px black",
           }}
         >
           Get Weather Conditions
