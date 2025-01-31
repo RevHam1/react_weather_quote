@@ -257,7 +257,14 @@ function WeatherApp() {
       }}
     >
       <div>
-        <h1>Get Weather Conditions</h1>
+        <h1
+          style={{
+            marginTop: "20px",
+            padding: "10px 10px",
+          }}
+        >
+          Get Weather Conditions
+        </h1>
         <p
           style={{
             padding: "10px 10px",
@@ -281,7 +288,7 @@ function WeatherApp() {
             style={{
               padding: "10px 10px",
               width: "1200px",
-              fontSize: "36px",
+              fontSize: " ",
             }}
           />
         )}
