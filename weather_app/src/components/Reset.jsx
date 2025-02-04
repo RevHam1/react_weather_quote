@@ -5,7 +5,11 @@ const refreshPage = () => {
 
 function Reset() {
   return (
-    <div>
+    <div
+      style={{
+        marginTop: "-40px",
+      }}
+    >
       <button
         style={{
           color: "white",

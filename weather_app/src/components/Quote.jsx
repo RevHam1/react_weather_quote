@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
+import LotteryGenerator from "./LotteryGenerator";
 
 function QuoteComponent() {
   const [quote, setQuote] = useState(null);
@@ -26,28 +27,34 @@ function QuoteComponent() {
     fetchQuote();
   }, []);
 
+  const getQuoteStyle = (quote) => {
+    return quote.length < 120
+      ? { fontSize: "38px", color: "white", textShadow: "2px 2px 4px black" }
+      : { fontSize: "29px", color: "white", textShadow: "2px 2px 4px black" };
+  };
+
   return (
     <div
       className="quote-container"
       style={{ textAlign: "center", padding: "20px" }}
     >
-      <h2>Quote for Today</h2>
+      <h3 style={{ textShadow: "2px 2px 4px black" }}>Quote for Today</h3>
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <p
-          style={{
-            fontStyle: "italic",
-            padding: "10px 10px",
-            width: "1180px",
-            color: "yellow",
-            textShadow: "2px 2px 4px black",
-            fontSize: "32px",
-          }}
-        >
-          &quot;{quote.quote}&quot;
-          <p>-{quote.author}-</p>
-        </p>
+        <div style={{ padding: "10px", width: "1180px" }}>
+          <p style={getQuoteStyle(quote.quote)}>&quot;{quote.quote}&quot;</p>
+          <p
+            style={{
+              scrollMarginBottom: "30px",
+              color: "white",
+              textShadow: "2px 2px 4px black",
+            }}
+          >
+            -{quote.author}-
+          </p>
+          <LotteryGenerator />
+        </div>
       )}
     </div>
   );
