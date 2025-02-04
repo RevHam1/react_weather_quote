@@ -55,6 +55,7 @@ import Image16 from "../images/umbrellas.jpeg";
 import Image8 from "../images/violrttTop.jpg";
 import Image12 from "../images/weather.jpg";
 import Image9 from "../images/weatherBG.png";
+import Image50 from "../images/weatherIcon.jpg";
 import Image34 from "../images/wildfire.jpg";
 
 const images = [
@@ -108,6 +109,7 @@ const images = [
   Image47,
   Image48,
   Image49,
+  Image50,
 ];
 
 function WeatherApp() {
