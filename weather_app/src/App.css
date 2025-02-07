@@ -96,9 +96,9 @@ h4 {
     display: none;
   } */
 
-  /* .conditions-always-change {
+  .conditions-always-change {
     display: none;
-  } */
+  }
 
   .hero {
     background-size: contain;
@@ -127,7 +127,7 @@ h4 {
   } */
 
   #get-weather-conditions {
-    margin-top: 35px;
+    margin-top: 25px;
   }
 
   .content h1 {
@@ -139,7 +139,7 @@ h4 {
     font-size: 24px;
     width: 80%;
     margin-left: 25px;
-    /* margin-top: 10px; */
+    margin-top: -5px;
     margin-bottom: 0px;
   }
 
@@ -186,8 +186,8 @@ h4 {
     font-size: 25px;
     width: 80%;
     margin-left: 18px;
-    margin-top: 10px;
-    margin-bottom: 0px;
+    margin-top: 8px;
+    margin-bottom: -2px;
   }
 
   .hero .reset {
@@ -205,7 +205,7 @@ h4 {
   }
 
   .hero .super-small-grid {
-    font-size: 6px;
+    font-size: 7px;
   }
 }
 
