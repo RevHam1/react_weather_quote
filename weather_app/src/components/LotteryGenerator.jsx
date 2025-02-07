@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "./LotteryGenerator.css"; // Import the styles
 
 function LotteryGenerator() {
   const [numbers, setNumbers] = useState([]);
@@ -40,41 +41,11 @@ function LotteryGenerator() {
   }, []);
 
   return (
-    <div style={{ textAlign: "center", padding: "20px" }}>
-      <h5
-        style={{
-          fontStyle: "italic",
-          paddingTop: "40px",
-          //   padding: "10px 10px",
-          width: "1180px",
-          color: "yellow",
-          textShadow: "2px 2px 4px black",
-          fontSize: "26px",
-          //   textAlign: "center",
-          //   alignItems: "cemter",
-        }}
-      >
-        Pick 6 Lottery Numbers
-      </h5>
-
+    <div className="lottery-container">
+      <h5 className="lottery-title">Pick 6 Lottery Numbers</h5>
       <div>
         {displayedNumbers.map((number, index) => (
-          <div
-            key={index}
-            style={{
-              display: "inline-flex",
-              justifyContent: "center",
-              alignItems: "center",
-              width: "30px", // Adjust size as needed
-              height: "30px", // Adjust size as needed
-              backgroundColor: "red",
-              borderRadius: "50%",
-              color: "white",
-              textAlign: "center",
-              fontSize: "15px",
-              margin: "10px",
-            }}
-          >
+          <div key={index} className="lottery-number">
             {number}
           </div>
         ))}

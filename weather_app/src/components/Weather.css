@@ -13,6 +13,7 @@
 body {
   padding: 2rem;
   background-color: darkblue;
+
   color: whitesmoke;
   min-height: 100vh;
   display: flex;
@@ -37,11 +38,18 @@ p .italic-text {
   font-size: 2rem;
 }
 
-input,
-button {
+input {
   font-size: 2rem;
   padding: 1rem;
   border-radius: 10px;
+  width: 16%;
+}
+
+.hero button {
+  font-size: 2rem;
+  padding: 1rem;
+  border-radius: 10px;
+  width: 20%;
 }
 
 .get-weather-button {
@@ -54,6 +62,7 @@ button {
   background-color: #0056b3;
 }
 
-.city-input {
+/* .city-input {
   margin: 1rem;
-}
+  width: 15%;
+} */

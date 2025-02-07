@@ -1,0 +1,62 @@
+/* Base Styles */
+.lottery-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.lottery-title {
+  font-style: italic;
+  padding-top: 40px;
+  padding-right: 50px;
+  width: 1180px;
+  color: yellow;
+  text-shadow: 2px 2px 4px black;
+  font-size: 26px;
+}
+
+.lottery-number {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px; /* Adjust size as needed */
+  height: 30px; /* Adjust size as needed */
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+  margin: 10px;
+}
+
+/* Media Queries */
+
+/* Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+  .lottery-title {
+    width: 130%;
+    font-size: 18px;
+    /* text-align: center; */
+    margin-top: -20px;
+    margin-bottom: -20px;
+  }
+
+  .lottery-number {
+    width: 10px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    font-size: 12px;
+  }
+}
+
+/* Medium devices (tablets, 601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .lottery-title {
+    width: 80%;
+    font-size: 22px;
+  }
+
+  .lottery-number {
+    width: 25px; /* Adjust size as needed */
+    height: 25px; /* Adjust size as needed */
+    font-size: 14px;
+  }
+}

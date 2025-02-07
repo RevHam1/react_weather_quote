@@ -10,17 +10,7 @@ function Reset() {
         marginTop: "-40px",
       }}
     >
-      <button
-        style={{
-          color: "white",
-          backgroundColor: "blue",
-          padding: "10px 20px",
-          border: "none",
-          borderRadius: "5px",
-          cursor: "pointer",
-        }}
-        onClick={refreshPage}
-      >
+      <button className="reset" onClick={refreshPage}>
         Reset
       </button>
     </div>
