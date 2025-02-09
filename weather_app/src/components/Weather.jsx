@@ -101,6 +101,19 @@ import Image87 from "../images/38 Field2.png";
 import Image88 from "../images/39 Tractor.jpg";
 import Image89 from "../images/40 Dusty.jpg";
 
+import Image90 from "../images/41 Roses.avif";
+import Image91 from "../images/42 MistyPath.avif";
+import Image92 from "../images/43 DarkPath.avif";
+import Image93 from "../images/44 Drops.avif";
+import Image94 from "../images/45 DarkStreet.avif";
+import Image95 from "../images/46 OrangeMoon.avif";
+import Image96 from "../images/47 Fire.avif";
+import Image97 from "../images/48 Path.avif";
+import Image98 from "../images/49 MafentaLight.avif";
+
+import Image99 from "../images/50 One Rose.avif";
+import Image100 from "../images/51 PuffDark.webp";
+
 const images = [
   Image,
   Image1,
@@ -192,6 +205,17 @@ const images = [
   Image87,
   Image88,
   Image89,
+  Image90,
+  Image91,
+  Image92,
+  Image93,
+  Image94,
+  Image95,
+  Image96,
+  Image97,
+  Image98,
+  Image99,
+  Image100,
 ];
 
 function WeatherApp() {
@@ -283,11 +307,13 @@ function WeatherApp() {
               <p className="feels-like">
                 Feels Like: {weatherInfo.feels_like}°F
               </p>
-              <img
-                src={`http://openweathermap.org/img/w/${weatherInfo.icon}.png`}
-                alt={weatherInfo.description}
-                className="weather-icon"
-              />
+              <div className="weather-icon-position">
+                <img
+                  src={`http://openweathermap.org/img/w/${weatherInfo.icon}.png`}
+                  alt={weatherInfo.description}
+                  className="weather-icon"
+                />
+              </div>
             </div>
 
             {forecast && (

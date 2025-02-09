@@ -34,8 +34,8 @@
   text-shadow: 2px 2px 4px black;
 }
 
-.content h1 {
-  font-size: 56px;
+.hero .content h1 {
+  font-size: 70px;
   font-weight: bolder;
 }
 
@@ -54,6 +54,7 @@ h4 {
 }
 
 .city-input {
+  /* font-size: 22px; */
   margin: 1rem;
   width: 21%;
   justify-content: center;
@@ -100,10 +101,10 @@ h4 {
     display: none;
   }
 
-  .hero {
+  /* .hero {
     background-size: contain;
     background-position: top center;
-  }
+  } */
 
   .grid-con {
     display: grid;
@@ -127,7 +128,7 @@ h4 {
   } */
 
   #get-weather-conditions {
-    margin-top: 25px;
+    margin-top: 20px;
   }
 
   .content h1 {
@@ -205,15 +206,40 @@ h4 {
   }
 
   .hero .super-small-grid {
-    font-size: 7px;
+    font-size: 6px;
   }
 }
 
 /* Medium devices (tablets, 600px to 900px) */
 @media (min-width: 601px) and (max-width: 900px) {
-  .content h1 {
-    font-size: 48px;
-    margin-top: 30px;
+  .hero .content h1 {
+    font-size: 45px;
+    margin-top: 10px;
+  }
+
+  .hero .conditions-always-change {
+    width: 100%;
+    font-size: 24px;
+  }
+
+  .hero .weather-icon-position {
+    width: 130%;
+    /* padding-left: 100px; */
+  }
+
+  .forecast-title {
+    font-size: 30px;
+    width: 130%;
+  }
+
+  .hero .forecast-description {
+    width: 130%;
+    font-size: 26px;
+  }
+
+  .hero .feels-like {
+    width: 130%;
+    font-size: 22px;
   }
 
   .content p {
@@ -226,10 +252,12 @@ h4 {
 
   .city-input {
     width: 50%;
+    padding: 0.5rem;
   }
 
-  .input-button {
-    width: 40%;
+  .hero .input-button {
+    width: 42%;
+    padding: 0.5rem;
   }
 
   #quote {
@@ -240,7 +268,38 @@ h4 {
 /* Large devices (laptops/desktops, 901px to 1200px) */
 @media (min-width: 901px) and (max-width: 1200px) {
   .content h1 {
-    font-size: 52px;
+    font-size: 110px;
+  }
+
+  .hero .conditions-always-change {
+    width: 100%;
+    font-size: 30px;
+  }
+
+  /* .hero h4 {
+    margin-top: -40px;
+    font-size: 60px;
+  } */
+
+  .hero .forecast-title {
+    font-size: 50px;
+    width: 110%;
+  }
+
+  .hero .weather-icon-position {
+    width: 110%;
+    /* padding-left: 100px; */
+    margin-bottom: 50px;
+  }
+
+  .hero .forecast-description {
+    width: 110%;
+    font-size: 40px;
+  }
+
+  div .hero .feels-like {
+    width: 110%;
+    font-size: 36px;
   }
 
   .content p {
@@ -252,41 +311,23 @@ h4 {
   }
 
   .city-input {
-    width: 30%;
+    width: 40%;
+    font-size: 45px;
   }
 
-  .input-button {
-    width: 25%;
+  .hero .input-button {
+    width: 30%;
+    font-size: 40px;
+  }
+
+  h4 {
+    margin-top: -40px;
+    font-size: 60px;
+    width: 100%;
+    /* margin-left: 25px; */
   }
 
   #quote {
     font-size: 28px;
-  }
-}
-
-/* Extra large devices (large desktops, 1201px and up) */
-@media (min-width: 1201px) {
-  .content h1 {
-    font-size: 56px;
-  }
-
-  .content p {
-    font-size: 22px;
-  }
-
-  .hero {
-    height: 150vh;
-  }
-
-  .city-input {
-    width: 21%;
-  }
-
-  .input-button {
-    width: 16%;
-  }
-
-  #quote {
-    font-size: 32px;
   }
 }

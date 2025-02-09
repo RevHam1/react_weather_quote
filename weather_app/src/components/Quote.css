@@ -11,11 +11,14 @@
   padding: 10px;
   width: 1180px;
 }
+
 h3 {
-  font-size: 28px;
+  font-size: 38px;
+  margin-top: -10px;
 }
-.quote {
-  font-size: 32px;
+
+div .quote {
+  font-size: 35px;
   color: white;
   text-shadow: 2px 2px 4px black;
 }
@@ -34,26 +37,69 @@ h3 {
     width: 100%;
   }
 
-  .quote {
-    font-size: 20px;
+  h3 {
+    font-size: 34px;
+    margin-top: -10px;
   }
 
-  .quote-author {
+  div .quote {
     font-size: 16px;
+  }
+
+  div .quote-author {
+    font-size: 10px;
   }
 }
 
 /* Medium devices (tablets, 601px to 900px) */
 @media (min-width: 601px) and (max-width: 900px) {
-  .quote-content {
+  /* .quote-content {
     width: 80%;
+  } */
+
+  /* div .quote-content {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  } */
+
+  .quote-container div .quote {
+    font-size: 35px;
+    width: 100%;
   }
 
-  .quote {
-    font-size: 25px;
-  }
-
-  .quote-author {
+  div .quote-author {
     font-size: 20px;
+    width: 100%;
   }
 }
+
+/* Medium devices (laptops/desktops, 901px to 1200px) */
+@media (min-width: 901px) and (max-width: 1200px) {
+  /* .quote-content {
+    width: 100%;
+  } */
+
+  /* div .quote-content {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  } */
+
+  .quote-container div .quote {
+    font-size: 46px;
+    width: 90%;
+    text-align: center;
+
+    /* padding-left: 40px; */
+  }
+
+  div .quote-author {
+    font-size: 35px;
+    width: 90%;
+  }
+}
+
+/* Large devices (laptops/desktops, 901px to 1200px) */

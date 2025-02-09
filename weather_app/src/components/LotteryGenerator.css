@@ -41,22 +41,48 @@
   }
 
   .lottery-number {
-    width: 10px; /* Adjust size as needed */
-    height: 20px; /* Adjust size as needed */
-    font-size: 12px;
+    width: 22px; /* Adjust size as needed */
+    height: 22px; /* Adjust size as needed */
+    font-size: 14px;
+    margin: 5px;
   }
 }
 
 /* Medium devices (tablets, 601px to 900px) */
 @media (min-width: 601px) and (max-width: 900px) {
   .lottery-title {
-    width: 80%;
-    font-size: 22px;
+    width: 100%;
+    font-size: 30px;
+    margin-top: -20px;
   }
 
   .lottery-number {
-    width: 25px; /* Adjust size as needed */
-    height: 25px; /* Adjust size as needed */
-    font-size: 14px;
+    width: 35px; /* Adjust size as needed */
+    height: 35px; /* Adjust size as needed */
+    font-size: 26px;
+  }
+
+  .adjust-nmbers-position {
+    /* padding-left: 20px; */
+    width: 100%;
+  }
+}
+
+/* Medium devices (laptops/desktops, 901px to 1200px) */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .lottery-title {
+    /* width: 140%; */
+    font-size: 60px;
+  }
+
+  .lottery-number {
+    width: 53px; /* Adjust size as needed */
+    height: 53px; /* Adjust size as needed */
+    font-size: 38px;
+  }
+
+  .adjust-nmbers-position {
+    /* padding-left: 20px; */
+    width: 100%;
   }
 }

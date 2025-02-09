@@ -43,7 +43,7 @@ function LotteryGenerator() {
   return (
     <div className="lottery-container">
       <h5 className="lottery-title">Pick 6 Lottery Numbers</h5>
-      <div>
+      <div className="adjust-nmbers-position">
         {displayedNumbers.map((number, index) => (
           <div key={index} className="lottery-number">
             {number}
