@@ -44,11 +44,36 @@ div .quote {
 
   div .quote {
     font-size: 16px;
+    text-shadow: 2px 2px 4px black, 2px 2px 0px green;
   }
 
   div .quote-author {
     font-size: 10px;
   }
+}
+
+/* Small devices (phones, 740px and down) - Landscape */
+@media (max-width: 740px) and (orientation: landscape) {
+  .quote-content {
+    width: 100%;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-top: -8px;
+    margin-bottom: -10px;
+  }
+}
+
+div #quote .quote {
+  font-size: 15px;
+  text-shadow: 2px 2px 4px black, 2px 2px 0px green;
+}
+
+div #quote .quote-author {
+  font-size: 12px;
+  margin-top: 3px;
+  margin-bottom: -30px;
 }
 
 /* Medium devices (tablets, 601px to 900px) */

@@ -52,19 +52,40 @@
 @media (min-width: 601px) and (max-width: 900px) {
   .lottery-title {
     width: 100%;
-    font-size: 30px;
+    font-size: 27px;
     margin-top: -20px;
   }
 
   .lottery-number {
-    width: 35px; /* Adjust size as needed */
-    height: 35px; /* Adjust size as needed */
-    font-size: 26px;
+    width: 33px; /* Adjust size as needed */
+    height: 33px; /* Adjust size as needed */
+    font-size: 24px;
   }
 
   .adjust-nmbers-position {
     /* padding-left: 20px; */
     width: 100%;
+  }
+}
+
+/* Small devices (phones, 740px and down) - Landscape */
+@media (min-width: 601px) and (max-width: 900px) and (orientation: landscape) {
+  .lottery-title {
+    font-size: 15px; /* Adjusted size for landscape */
+    margin-top: -18px; /* Adjusted margin for landscape */
+    padding-left: 35px;
+  }
+
+  .lottery-number {
+    width: 20px; /* Adjusted size for landscape */
+    height: 20px; /* Adjusted size for landscape */
+    font-size: 14px; /* Adjusted font size for landscape */
+  }
+
+  .adjust-nmbers-position {
+    padding-right: 20px;
+    margin-top: -18px;
+    margin-bottom: -18px;
   }
 }
 

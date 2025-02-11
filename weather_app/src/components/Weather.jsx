@@ -110,9 +110,16 @@ import Image95 from "../images/46 OrangeMoon.avif";
 import Image96 from "../images/47 Fire.avif";
 import Image97 from "../images/48 Path.avif";
 import Image98 from "../images/49 MafentaLight.avif";
-
 import Image99 from "../images/50 One Rose.avif";
+
 import Image100 from "../images/51 PuffDark.webp";
+import Image101 from "../images/52 Free.png";
+import Image102 from "../images/53 Bus.png";
+import Image103 from "../images/54 Chicago.png";
+import Image104 from "../images/55 PinkCloud.jpg";
+import Image105 from "../images/56 HorseClouds.jpg";
+import Image106 from "../images/57 NiceSkyLine.jpg";
+import Image107 from "../images/58 ColoredClouds.jpg";
 
 const images = [
   Image,
@@ -216,6 +223,13 @@ const images = [
   Image98,
   Image99,
   Image100,
+  Image101,
+  Image102,
+  Image103,
+  Image104,
+  Image105,
+  Image106,
+  Image107,
 ];
 
 function WeatherApp() {
@@ -265,6 +279,7 @@ function WeatherApp() {
 
   return (
     <section
+      id="hero"
       className="hero"
       style={{
         backgroundImage: `url(${backgroundImage})`,
@@ -305,7 +320,7 @@ function WeatherApp() {
               </p>
 
               <p className="feels-like">
-                Feels Like: {weatherInfo.feels_like}°F
+                Feels Like: {Math.round(weatherInfo.feels_like)}°F
               </p>
               <div className="weather-icon-position">
                 <img
@@ -323,7 +338,7 @@ function WeatherApp() {
                   paddingBottom: "-20px",
                 }}
               >
-                <h4>5-Day Forecast for {forecast.city.name}</h4>
+                <h4 id="days-5">5-Day Forecast for {forecast.city.name}</h4>
                 <div
                   style={{
                     display: "flex",

@@ -85,7 +85,7 @@ function QuoteComponent() {
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <div className="quote-content">
+        <div id="quote" className="quote-content">
           <p className="quote">&quot;{quote.quote}&quot;</p>
           <p className="quote-author">-{quote.author}-</p>
           <LotteryGenerator />
