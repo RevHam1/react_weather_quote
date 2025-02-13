@@ -63,7 +63,7 @@ function QuoteComponent() {
           "X-Api-Key": import.meta.env.VITE_API_NINJAS_QUOTE_KEY,
         },
         params: {
-          maxLength: 120, // Set the max length of the quote
+          maxLength: 150, // Set the max length of the quote
         },
       });
       setQuote(response.data[0]);
@@ -80,7 +80,7 @@ function QuoteComponent() {
   }, []);
 
   return (
-    <div className="quote-container">
+    <div id="quote-container" className="quote-container">
       <h3>Quote for Today</h3>
       {loading ? (
         <p>Loading...</p>

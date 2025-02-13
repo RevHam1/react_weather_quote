@@ -127,4 +127,16 @@ div #quote .quote-author {
   }
 }
 
-/* Large devices (laptops/desktops, 901px to 1200px) */
+/* Large devices (1200px and above) */
+@media (min-width: 1200px) {
+  #quote-container div .quote {
+    font-size: 36px;
+    /* width: 80%; */
+    text-align: center;
+  }
+
+  #quote-container div .quote-author {
+    font-size: 1.5vw; /* Use relative units for font-size */
+    /* width: 80%; */
+  }
+}

@@ -1,0 +1,30 @@
+.quote-container {
+  text-align: center;
+  padding: 2vw; /* Use relative units for padding */
+}
+
+.quote-container h3 {
+  text-shadow: 0.1vw 0.1vw 0.2vw black; /* Use relative units for text-shadow */
+}
+
+.quote-content {
+  padding: 1vw; /* Use relative units for padding */
+  width: 80vw; /* Use relative units for width */
+}
+
+h3 {
+  font-size: 4vw; /* Use relative units for font-size */
+  margin-top: -1vw; /* Use relative units for margin */
+}
+
+div .quote {
+  font-size: 3.5vw; /* Use relative units for font-size */
+  color: white;
+  text-shadow: 0.1vw 0.1vw 0.2vw black; /* Use relative units for text-shadow */
+}
+
+.quote-author {
+  scroll-margin-bottom: 3vw; /* Use relative units for scroll-margin-bottom */
+  color: white;
+  text-shadow: 0.1vw 0.1vw 0.2vw black; /* Use relative units for text-shadow */
+}

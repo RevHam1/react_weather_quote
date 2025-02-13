@@ -1,0 +1,105 @@
+/* Base Styles */
+.lottery-container {
+  text-align: center;
+  padding: 2vw; /* Use relative units for padding */
+}
+
+.lottery-title {
+  font-style: italic;
+  padding-top: 4vw; /* Use relative units for padding */
+  padding-right: 5vw; /* Use relative units for padding */
+  width: 80vw; /* Use relative units for width */
+  color: yellow;
+  text-shadow: 0.2vw 0.2vw 0.4vw black; /* Use relative units for text-shadow */
+  font-size: 2.6vw; /* Use relative units for font-size */
+}
+
+.lottery-number {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 3vw; /* Use relative units for size */
+  height: 3vw; /* Use relative units for size */
+  background-color: red;
+  border-radius: 50%;
+  color: white;
+  text-align: center;
+  font-size: 1.5vw; /* Use relative units for font-size */
+  margin: 1vw; /* Use relative units for margin */
+}
+
+/* Media Queries */
+
+/* Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+  .lottery-title {
+    width: 130%; /* Relative units not necessary here */
+    font-size: 3.6vw; /* Use relative units for font-size */
+    margin-top: -2vw; /* Use relative units for margin */
+    margin-bottom: -2vw; /* Use relative units for margin */
+  }
+
+  .lottery-number {
+    width: 2.2vw; /* Use relative units for size */
+    height: 2.2vw; /* Use relative units for size */
+    font-size: 1.4vw; /* Use relative units for font-size */
+    margin: 0.5vw; /* Use relative units for margin */
+  }
+}
+
+/* Medium devices (tablets, 601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .lottery-title {
+    width: 100%; /* Relative units not necessary here */
+    font-size: 2.7vw; /* Use relative units for font-size */
+    margin-top: -2vw; /* Use relative units for margin */
+  }
+
+  .lottery-number {
+    width: 3.3vw; /* Use relative units for size */
+    height: 3.3vw; /* Use relative units for size */
+    font-size: 2.4vw; /* Use relative units for font-size */
+  }
+
+  .adjust-nmbers-position {
+    width: 100%; /* Relative units not necessary here */
+  }
+}
+
+/* Small devices (phones, 740px and down) - Landscape */
+@media (min-width: 601px) and (max-width: 900px) and (orientation: landscape) {
+  .lottery-title {
+    font-size: 1.5vw; /* Adjusted size for landscape */
+    margin-top: -1.8vw; /* Adjusted margin for landscape */
+    padding-left: 3.5vw; /* Use relative units for padding */
+  }
+
+  .lottery-number {
+    width: 2vw; /* Adjusted size for landscape */
+    height: 2vw; /* Adjusted size for landscape */
+    font-size: 1.4vw; /* Adjusted font size for landscape */
+  }
+
+  .adjust-nmbers-position {
+    padding-right: 2vw; /* Use relative units for padding */
+    margin-top: -1.8vw; /* Use relative units for margin */
+    margin-bottom: -1.8vw; /* Use relative units for margin */
+  }
+}
+
+/* Medium devices (laptops/desktops, 901px to 1200px) */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .lottery-title {
+    font-size: 6vw; /* Use relative units for font-size */
+  }
+
+  .lottery-number {
+    width: 5.3vw; /* Use relative units for size */
+    height: 5.3vw; /* Use relative units for size */
+    font-size: 3.8vw; /* Use relative units for font-size */
+  }
+
+  .adjust-nmbers-position {
+    width: 100%; /* Relative units not necessary here */
+  }
+}
