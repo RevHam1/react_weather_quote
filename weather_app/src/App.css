@@ -374,6 +374,7 @@ h4 {
   .hero .city-input {
     font-size: 25px;
     padding: 0.75rem;
+    width: 22%;
   }
 
   .hero .input-button {
