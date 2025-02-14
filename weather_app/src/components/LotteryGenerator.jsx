@@ -1,6 +1,9 @@
+// I. Imports to help with Javascript client-side logic
 import { useEffect, useState } from "react";
 import "./LotteryGenerator.css"; // Import the styles
 
+// II. Main Function for client-side javascript logic
+// A. Set constanst variables for  various useState
 function LotteryGenerator() {
   const [numbers, setNumbers] = useState([]);
   const [displayedNumbers, setDisplayedNumbers] = useState([]);
@@ -19,6 +22,7 @@ function LotteryGenerator() {
     setIsGenerating(true);
   };
 
+  // A. Run a useEffect hook that runs dynamically updates and displays a list of numbers over time
   useEffect(() => {
     if (isGenerating && numbers.length > 0) {
       let index = 0;
@@ -36,10 +40,12 @@ function LotteryGenerator() {
     }
   }, [isGenerating, numbers]);
 
+  // B. Run a useEffect hook that runs generateNumbers for lotterty
   useEffect(() => {
     generateNumbers();
   }, []);
 
+  // III. The HTML that utilizes Javascript client-side logic
   return (
     <div className="lottery-container">
       <h5 className="lottery-title">Pick 6 Lottery Numbers</h5>

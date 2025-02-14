@@ -1,12 +1,4 @@
-// import axios from "axios";
-// import { useEffect, useState } from "react";
-// import imagePaths from "./imagePaths.json"; // Assuming the JSON file is in the same directory
-// import Quote from "./Quote";
-// import Reset from "./Reset";
-
-// import "./styles.css"; // Import the styles
-// import "./Weather.css";
-
+// I. Imports to help with Javascript client-side logic
 import axios from "axios";
 import { useEffect, useState } from "react";
 import Quote from "./Quote";
@@ -15,6 +7,7 @@ import Reset from "./Reset";
 import "./styles.css"; // Import the styles
 import "./Weather.css";
 
+// Get images; Could put in json file and import but had promble, with images showing in github pages
 import Image28 from "../images/1 Aroura.jpg";
 import Image29 from "../images/alaska.avif";
 import Image30 from "../images/alaska2.avif";
@@ -241,6 +234,8 @@ const images = [
   Image107,
 ];
 
+// II. Main Function for client-side javascript logic
+// A. Set constanst variables for  various useState and to get api key from env file
 function WeatherApp() {
   const [city, setCity] = useState("");
   const [state, setState] = useState(""); // New state for state code
@@ -253,14 +248,18 @@ function WeatherApp() {
 
   const apiKey = import.meta.env.VITE_API_KEY;
 
+  // B. Run a useEffect hook that randomly select a different backgroud from the images imported above
   useEffect(() => {
     const randomIndex = Math.floor(Math.random() * images.length);
     setBackgroundImage(images[randomIndex]);
   }, []);
 
+  // C. Arrow function (try, catch, finally) to Get weather informtion from weather api
   const getWeatherData = async () => {
     setLoading(true);
     setError(null);
+    // 1. Try
+    // Getting data from API
     try {
       const location = state ? `${city},${state},US` : city; // Include state if provided
       const [currentResponse, forecastResponse] = await Promise.all([
@@ -271,7 +270,7 @@ function WeatherApp() {
           `https://api.openweathermap.org/data/2.5/forecast?q=${location}&appid=${apiKey}&units=imperial`
         ),
       ]);
-
+      // Creating a Weather Info Object from response and use setState - setWeatherInfo
       setWeatherInfo({
         description: currentResponse.data.weather[0].description,
         temperature: currentResponse.data.main.temp,
@@ -280,30 +279,36 @@ function WeatherApp() {
         name: currentResponse.data.name,
         state: state || "", // Add state to weatherInfo, default to empty string if not provided
       });
-
+      // Creating a Forecast Object with setState
       setForecast({
         ...forecastResponse.data,
         state: state || "", // Add state to forecast data
       });
-
-      // Check for alerts
+      // Check for alerts with setStsate - setAlerts
       if (currentResponse.data.alerts) {
         setAlerts(currentResponse.data.alerts);
       } else {
         setAlerts(null);
       }
+
+      // 2. Catch and display error message with if/else
     } catch (error) {
       console.error("Error fetching weather data:", error);
       if (error.response && error.response.status === 404) {
-        setError("Invalid city or state. Please check your input and try again.");
+        setError(
+          "Invalid city or state. Please check your input and try again."
+        );
       } else {
         setError("Failed to fetch weather data. Please try again.");
       }
+
+      // 3. finally
     } finally {
       setLoading(false);
     }
   };
 
+  // III. The HTML that utilizes Javascript client-side logic
   return (
     <section
       id="hero"
@@ -327,7 +332,7 @@ function WeatherApp() {
           type="text"
           value={state}
           onChange={(e) => setState(e.target.value)}
-          placeholder="State code (optional)"
+          placeholder="State 2 ltrs (optional)"
           className="city-input"
         />
         <button className="input-button" onClick={getWeatherData}>
