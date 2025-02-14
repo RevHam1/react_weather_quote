@@ -1,0 +1,128 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.quote-container {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  gap: 1rem;
+}
+
+.quote-container h3 {
+  text-shadow: 2px 2px 4px black;
+}
+
+.quote-content {
+  padding: 10px;
+  width: 100%;
+  max-width: 1180px;
+}
+
+h3 {
+  font-size: 38px;
+  margin-top: -10px;
+}
+
+div .quote {
+  font-size: 35px;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+}
+
+.quote-author {
+  margin-bottom: 30px;
+  color: white;
+  text-shadow: 2px 2px 4px black;
+}
+
+/* Media Queries */
+
+/* Small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+  .quote-content {
+    width: 100%;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-top: -10px;
+  }
+
+  div .quote {
+    font-size: 16px;
+    text-shadow: 2px 2px 4px black, 2px 2px 0px green;
+  }
+
+  div .quote-author {
+    font-size: 10px;
+  }
+}
+
+/* Small devices (phones, 740px and down) - Landscape */
+@media (max-width: 740px) and (orientation: landscape) {
+  .quote-content {
+    width: 100%;
+  }
+
+  h3 {
+    font-size: 20px;
+    margin-top: -8px;
+    margin-bottom: -10px;
+  }
+}
+
+div #quote .quote {
+  font-size: 15px;
+  text-shadow: 2px 2px 4px black, 2px 2px 0px green;
+}
+
+div #quote .quote-author {
+  font-size: 12px;
+  margin-top: 3px;
+  margin-bottom: -30px;
+}
+
+/* Medium devices (tablets, 601px to 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .quote-container div .quote {
+    font-size: 35px;
+    width: 100%;
+  }
+
+  div .quote-author {
+    font-size: 20px;
+    width: 100%;
+  }
+}
+
+/* Medium devices (laptops/desktops, 901px to 1200px) */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .quote-container div .quote {
+    font-size: 46px;
+    width: 90%;
+    text-align: center;
+  }
+
+  div .quote-author {
+    font-size: 35px;
+    width: 90%;
+  }
+}
+
+/* Large devices (1200px and above) */
+@media (min-width: 1200px) {
+  #quote-container div .quote {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  #quote-container div .quote-author {
+    font-size: 1.5vw; /* Use relative units for font-size */
+  }
+}

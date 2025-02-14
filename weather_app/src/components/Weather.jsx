@@ -253,19 +253,6 @@ function WeatherApp() {
 
   const apiKey = import.meta.env.VITE_API_KEY;
 
-  // useEffect(() => {
-  //   // Dynamically load images
-  //   const loadImages = async () => {
-  //     const loadedImages = await Promise.all(
-  //       imagePaths.map((path) => import(`${path}`))
-  //     );
-  //     setBackgroundImage(
-  //       loadedImages[Math.floor(Math.random() * loadedImages.length)].default
-  //     );
-  //   };
-  //   loadImages();
-  // }, []);
-
   useEffect(() => {
     const randomIndex = Math.floor(Math.random() * images.length);
     setBackgroundImage(images[randomIndex]);
@@ -307,7 +294,11 @@ function WeatherApp() {
       }
     } catch (error) {
       console.error("Error fetching weather data:", error);
-      setError("Failed to fetch weather data. Please try again.");
+      if (error.response && error.response.status === 404) {
+        setError("Invalid city or state. Please check your input and try again.");
+      } else {
+        setError("Failed to fetch weather data. Please try again.");
+      }
     } finally {
       setLoading(false);
     }
