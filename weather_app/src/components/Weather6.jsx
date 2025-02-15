@@ -122,6 +122,14 @@ import Image104 from "../images/55 PinkCloud.jpg";
 import Image105 from "../images/56 HorseClouds.jpg";
 import Image106 from "../images/57 NiceSkyLine.jpg";
 import Image107 from "../images/58 ColoredClouds.jpg";
+import Image108 from "../images/59 denver skyline1.jpg";
+import Image109 from "../images/60 denver skyline2.jpg";
+
+import Image110 from "../images/61 denver skyline3.jpg";
+import Image111 from "../images/62 denver skyline4.jpg";
+import Image112 from "../images/63 denver skyline5.jpg";
+import Image113 from "../images/64 denver skyline6.jpg";
+import Image114 from "../images/65 denver skyline7.jpg";
 
 const images = [
   Image,
@@ -232,6 +240,13 @@ const images = [
   Image105,
   Image106,
   Image107,
+  Image108,
+  Image109,
+  Image110,
+  Image111,
+  Image112,
+  Image113,
+  Image114,
 ];
 
 // II. Main Function for client-side javascript logic
@@ -278,11 +293,6 @@ function WeatherApp() {
         icon: currentResponse.data.weather[0].icon,
         name: currentResponse.data.name,
         state: state || "", // Add state to weatherInfo, default to empty string if not provided
-      });
-      alerts({
-        headline: "Tornado Warning for Central County",
-        description:
-          "A tornado has been observed in the area. Flying debris will be dangerous to those caught without shelter. Mobile homes will be damaged or destroyed. Damage to roofs, windows, and vehicles will occur. Tree damage is likely.",
       });
       // Creating a Forecast Object with setState
       setForecast({
@@ -376,21 +386,34 @@ function WeatherApp() {
                 Feels Like: {Math.round(weatherInfo.feels_like)}°F
               </p>
 
+              <div >
+                <h5 className="small-grid">
+                  Winter Storm Warning for Northern Region
+                </h5>
+                <p className="super-small-grid"> 
+                  Heavy snowfall and strong winds are expected. Snow
+                  accumulations of 6 to 12 inches are likely. Travel will become
+                  very difficult to impossible. Snowfall rates may exceed 1 inch
+                  per hour at times.
+                </p>
+              </div>
+
               {alerts ? (
-                <div
-                  className="alerts"
-                  style={{
-                    justifyContent: "center",
-                    textAlign: "center",
-                    border: "2px dashed white",
-                    backgroundColor: "rgba(0, 0, 0, 0.5)",
-                  }}
-                >
+                <div className="alerts">
+                  <h3>Severe Weather Alerts</h3>
                   {alerts.map((alert, index) => (
                     <div key={index} className="alert">
-                      <h5 className="small-grid">{alert.headline}</h5>
+                      <p className="small-grid">{alert.event}</p>
                       <p className="super-small-grid">{alert.description}</p>
-                      <h1 id="get-weather-conditions">Get Weather Alerts 1</h1>
+                      <p className="super-small-grid">
+                        Urgency: {alert.urgency}
+                      </p>
+                      <p className="super-small-grid">
+                        Severity: {alert.severity}
+                      </p>
+                      <p className="super-small-grid">
+                        Certainty: {alert.certainty}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -401,53 +424,59 @@ function WeatherApp() {
                     alt={weatherInfo.description}
                     className="weather-icon"
                   />
-                  {/* <h1 id="get-weather-conditions">Get Weather Icon</h1> */}
-                </div>
-              )}
-
-              {forecast && (
-                <div style={{ marginBottom: "-20px", paddingBottom: "-20px" }}>
-                  <h4 id="days-5">
-                    5-Day Forecast for {forecast.city.name}{" "}
-                    {forecast.state && ` ${forecast.state}`}
-                  </h4>
-
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexWrap: "wrap",
-                    }}
-                  >
-                    {forecast.list
-                      .filter((_, index) => index % 8 === 0)
-                      .map((item, index) => (
-                        <div key={index}>
-                          <div className="forcast5 grid-con">
-                            <p className="cutbottom small-grid">
-                              {new Date(item.dt_txt).toLocaleDateString(
-                                "en-US",
-                                { weekday: "short" }
-                              )}
-                            </p>
-                            <p className="cutbottom super-small-grid">
-                              {item.weather[0].description}
-                            </p>
-                            <p className="temp cutbottom small-grid">
-                              {Math.round(item.main.temp)}°F
-                            </p>
-                          </div>
-                        </div>
-                      ))}
-                  </div>
                 </div>
               )}
             </div>
+
+            {forecast && (
+              <div
+                style={{
+                  marginBottom: "-20px",
+                  paddingBottom: "-20px",
+                }}
+              >
+                <h4 id="days-5">
+                  5-Day Forecast for {forecast.city.name}{" "}
+                  {forecast.state && ` ${forecast.state}`}
+                </h4>
+
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  {forecast.list
+                    .filter((_, index) => index % 8 === 0)
+                    .map((item, index) => (
+                      <div key={index}>
+                        <div className="forcast5 grid-con">
+                          <p className="cutbottom small-grid">
+                            {new Date(item.dt_txt).toLocaleDateString("en-US", {
+                              weekday: "short",
+                            })}
+                          </p>
+
+                          <p className="cutbottom super-small-grid">
+                            {item.weather[0].description}
+                          </p>
+                          <p className="temp cutbottom small-grid">
+                            {Math.round(item.main.temp)}°F
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                </div>
+              </div>
+            )}
           </div>
         )}
+
         <Reset />
       </div>
     </section>
   );
 }
+
 export default WeatherApp;

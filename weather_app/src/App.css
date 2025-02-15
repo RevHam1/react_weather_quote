@@ -244,7 +244,7 @@ h4 {
 
   div .forecast-title {
     width: 100%;
-    margin-left: 20%;
+    margin-left: 15%;
     margin-bottom: -8px;
     font-size: 32px;
   }
@@ -281,6 +281,13 @@ h4 {
 
   .hero .super-small-grid {
     font-size: 10px;
+  }
+
+  .alerts {
+    width: 100%;
+    margin-left: 40px;
+    margin-top: -10px;
+    margin-bottom: -5px;
   }
 }
 
