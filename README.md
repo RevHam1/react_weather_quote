@@ -31,7 +31,7 @@ includes a pick-six lottery number generator that generates random lottery numbe
 *	Forecast for the weekday
 *	Temperature for the weekday
 #### c) Show Weather Alerts
-*	TIf anu
+*	If any
 ### 3) City Error message:
 * Entering an invalid city or misspelling city name
 *	Show Failed to fetch weather data. Please try again
