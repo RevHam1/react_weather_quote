@@ -279,11 +279,7 @@ function WeatherApp() {
         name: currentResponse.data.name,
         state: state || "", // Add state to weatherInfo, default to empty string if not provided
       });
-      alerts({
-        headline: "Tornado Warning for Central County",
-        description:
-          "A tornado has been observed in the area. Flying debris will be dangerous to those caught without shelter. Mobile homes will be damaged or destroyed. Damage to roofs, windows, and vehicles will occur. Tree damage is likely.",
-      });
+
       // Creating a Forecast Object with setState
       setForecast({
         ...forecastResponse.data,
@@ -337,7 +333,7 @@ function WeatherApp() {
           type="text"
           value={state}
           onChange={(e) => setState(e.target.value)}
-          placeholder="State (2 letter optional)"
+          placeholder="State (2 letter Abrv)"
           className="city-input"
         />
         <button className="input-button" onClick={getWeatherData}>
