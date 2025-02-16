@@ -1,17 +1,19 @@
-# WEARHER QUOTEs
+# WEATHER QUOTEs
 This weather app offers a unique range of features that are both informative and inspiring. It includes daily and 
-5-day weather forecasts with detailed descriptions, temperatures, and weather icons for each forecast. It also 
+5-day weather forecasts with detailed descriptions, temperatures, and weather icons for each forecast or weather alerts. It also 
 provides random inspirational quotes for entertainment, displays a new random colorful background each time, and 
 includes a pick-six lottery number generator that generates random lottery numbers for users.
 
 ## App Features: Features Of The App
 ###	1) Daily and 5-Day Weather Forecasts:
 *	Displays description, temperature, and weather icon for each forecast.
-###	2) Inspirational Quotes:
+###	2) Weather Alerts:
+*	Displays the headline and description of alert if there is an alert in location searched for.
+###	3) Inspirational Quotes:
 *	Provides random inspirational quotes for entertainment.
-###	3) Random Backgrounds:
+###	4) Random Backgrounds:
 *	Displays a new random background each time.
-###	4) Pick Six Lottery Number Generator:
+###	5) Pick Six Lottery Number Generator:
 *	Generates random lottery numbers for users
 
 ## Using The App
@@ -28,6 +30,8 @@ includes a pick-six lottery number generator that generates random lottery numbe
 *	The weekday
 *	Forecast for the weekday
 *	Temperature for the weekday
-### 3) Simple City Error message:
+#### c) Show Weather Alerts
+*	TIf anu
+### 3) City Error message:
 * Entering an invalid city or misspelling city name
 *	Show Failed to fetch weather data. Please try again
