@@ -122,6 +122,30 @@ import Image104 from "../images/55 PinkCloud.jpg";
 import Image105 from "../images/56 HorseClouds.jpg";
 import Image106 from "../images/57 NiceSkyLine.jpg";
 import Image107 from "../images/58 ColoredClouds.jpg";
+import Image108 from "../images/59 denver skyline1.jpg";
+import Image109 from "../images/60 denver skyline2.jpg";
+
+import Image110 from "../images/61 denver skyline3.jpg";
+import Image111 from "../images/62 denver skyline4.jpg";
+import Image112 from "../images/63 denver skyline5.jpg";
+import Image113 from "../images/64 denver skyline6.jpg";
+import Image114 from "../images/65 denver skyline7.jpg";
+import Image115 from "../images/66 Logo 1.jpg";
+import Image116 from "../images/67 Logo 2.jpg";
+import Image117 from "../images/68 Logo 3.jpg";
+import Image118 from "../images/69 Logo 4.jpg";
+import Image119 from "../images/70 Logo 5.jpg";
+
+import Image120 from "../images/71 Logo 6.jpg";
+import Image121 from "../images/72 Logo 7.jpg";
+import Image122 from "../images/73 Logo 8.jpg";
+import Image123 from "../images/74 Logo 9.jpg";
+import Image124 from "../images/75 Logo 10.jpg";
+import Image125 from "../images/76 Clear 1.avif";
+import Image126 from "../images/77 Clear 2.avif";
+import Image127 from "../images/78 Clear 3.avif";
+import Image128 from "../images/79 Clear 4.avif";
+import Image129 from "../images/80  Clear 5.avif";
 
 const images = [
   Image,
@@ -232,6 +256,28 @@ const images = [
   Image105,
   Image106,
   Image107,
+  Image108,
+  Image109,
+  Image110,
+  Image111,
+  Image112,
+  Image113,
+  Image114,
+  Image115,
+  Image116,
+  Image117,
+  Image118,
+  Image119,
+  Image120,
+  Image121,
+  Image122,
+  Image123,
+  Image124,
+  Image125,
+  Image126,
+  Image127,
+  Image128,
+  Image129,
 ];
 
 // II. Main Function for client-side javascript logic
@@ -280,7 +326,7 @@ function WeatherApp() {
         state: state || "", // Add state to weatherInfo, default to empty string if not provided
       });
 
-      // Creating a Forecast Object with setState
+      // Creating a Forecast Object by speading forecastResponse
       setForecast({
         ...forecastResponse.data,
         state: state || "", // Add state to forecast data
