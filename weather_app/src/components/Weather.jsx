@@ -16,8 +16,10 @@ const images = imageData.images.map(
   (img) => new URL(img, import.meta.url).href
 );
 
+// Import images from JSON file
+
 // II. Main Function for client-side javascript logic
-// A. Set constanst variables for  various useState and to get api key from env file
+// A. Set constanst variables for various useState and to get api key from env file
 function WeatherApp() {
   const [city, setCity] = useState("");
   const [state, setState] = useState(""); // New state for state code
@@ -30,11 +32,18 @@ function WeatherApp() {
 
   const apiKey = import.meta.env.VITE_API_KEY;
 
-  // B. Run a useEffect hook that randomly select a different backgroud from the images imported above
+  // B. Run a useEffect hook that randomly selects a different background from the images imported above
   useEffect(() => {
-    const randomIndex = Math.floor(Math.random() * images.length);
-    console.log(randomIndex);
-    setBackgroundImage(images[randomIndex]);
+    const randomIndex = Math.floor(Math.random() * imageData.images.length);
+    const imagePath = imageData.images[randomIndex];
+
+    import(`${imagePath}`)
+      .then((image) => {
+        setBackgroundImage(image.default);
+      })
+      .catch((error) => {
+        console.error("Error loading image:", error);
+      });
   }, []);
 
   // C. Arrow function (try, catch, finally) to Get weather informtion from weather api
