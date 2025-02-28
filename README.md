@@ -4,6 +4,9 @@ This weather app offers a unique range of features that are both informative and
 provides random inspirational quotes for entertainment, displays a new random colorful background each time, and 
 includes a pick-six lottery number generator that generates random lottery numbers for users.
 
+![Image](https://github.com/user-attachments/assets/75219bc8-3790-4592-9806-038a9a069bfc)
+
+
 ## App Features: Features Of The App
 ###	1) Daily and 5-Day Weather Forecasts:
 *	Displays description, temperature, and weather icon for each forecast.
