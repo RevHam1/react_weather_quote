@@ -31,8 +31,17 @@ body {
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 3.8em;
   line-height: 1.1;
+  text-shadow: 2px 2px black;
+}
+
+.dynamic-container {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover; /* Ensures the image covers the container */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
 }
 
 button {

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Quote from "./Quote";
 import Reset from "./Reset";
 
-import "./styles.css"; // Import the styles
+// import "./styles.css"; // Import the styles
 import "./Weather.css";
 
 // Get images; Could put in json file and import but had promble, with images showing in github pages
@@ -358,33 +358,43 @@ function WeatherApp() {
   // III. The HTML that utilizes Javascript client-side logic
   return (
     <section
-      id="hero"
-      className="hero"
+      // id="hero"
+      className=" container hero"
+      // style={{
+      //   backgroundImage: `url(${backgroundImage})`,
+      // }}
       style={{
+        width: "100vw",
+        minHeight: "100vh",
+        overflowY: "auto",
         backgroundImage: `url(${backgroundImage})`,
       }}
     >
-      <div className="cutbottom">
-        <h1 id="get-weather-conditions">Get Weather Conditions</h1>
+      <div>
+        <h1>Get Weather Conditions</h1>
         <p className="conditions-always-change">The Conditions Always Change</p>
 
-        <input
-          type="text"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-          placeholder="Enter city"
-          className="city-input"
-        />
-        <input
-          type="text"
-          value={state}
-          onChange={(e) => setState(e.target.value)}
-          placeholder="State (2 letter Abrv)"
-          className="city-input"
-        />
-        <button className="input-button" onClick={getWeatherData}>
-          Get Weather
-        </button>
+        <div>
+          <input
+            type="text"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+            placeholder="Enter city"
+            className="city-input"
+          />
+          <input
+            type="text"
+            value={state}
+            onChange={(e) => setState(e.target.value)}
+            placeholder="State (2 letter Abrv)"
+            className="city-input"
+          />
+        </div>
+        <div>
+          <button className="input-button" onClick={getWeatherData}>
+            Get Weather
+          </button>
+        </div>
 
         {loading && <p>Loading...</p>}
         {error && (
@@ -443,16 +453,15 @@ function WeatherApp() {
                     alt={weatherInfo.description}
                     className="weather-icon"
                   />
-                  {/* <h1 id="get-weather-conditions">Get Weather Icon</h1> */}
                 </div>
               )}
 
               {forecast && (
                 <div style={{ marginBottom: "-20px", paddingBottom: "-20px" }}>
-                  <h4 id="days-5">
+                  <h2>
                     5-Day Forecast for {forecast.city.name}{" "}
                     {forecast.state && ` ${forecast.state}`}
-                  </h4>
+                  </h2>
 
                   <div
                     style={{

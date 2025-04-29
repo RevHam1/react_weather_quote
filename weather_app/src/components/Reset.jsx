@@ -7,7 +7,7 @@ function Reset() {
   return (
     <div
       style={{
-        marginTop: "-40px",
+        marginTop: "-10px",
       }}
     >
       <button className="reset" onClick={refreshPage}>
