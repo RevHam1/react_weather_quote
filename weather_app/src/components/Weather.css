@@ -1,20 +1,39 @@
-* {
+.dynamic-container {
+  display: flex; /* Enables Flexbox */
+  justify-content: center; /* Horizontally centers the content */
+  align-items: center; /* Vertically centers the content */
+  /* margin-top: -100px; */
+
+  width: 100vw;
+  min-height: 100vh; /* Ensure flexibility */
+  overflow-y: auto; /* Enables scrolling */
+  padding-bottom: 200px; /* Reduces space at the top */
+}
+
+/* WeatherApp.css */
+/* .dynamic-container {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+} */
+
+/* * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
+} */
 
-.hero {
+/* .hero {
   display: flex;
   height: 100vh;
   background-color: black;
-  /* width: max-content; */
-}
+} */
 
-body {
+/* body {
   padding: 2rem;
   background-color: darkblue;
-  /* width: max-content; */
 
   color: whitesmoke;
   min-height: 100vh;
@@ -22,40 +41,41 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-}
+} */
 
-div {
+/* div {
   font-size: 2rem;
   font-family: "Times New Roman", Times, serif;
-}
+} */
 
-h1 {
+/* h1 {
   font-size: 5rem;
-}
+} */
 
-p .italic-text {
+/* p .italic-text {
   font-style: italic;
   text-align: center;
   color: white;
   font-size: 2rem;
-}
+} */
 
 input {
   font-size: 2rem;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 10px;
   width: 16%;
+  height: 40px;
 }
 
-.hero button {
+button {
   font-size: 2rem;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 10px;
-  width: 20%;
-}
-
-.get-weather-button {
-  margin: 1.5rem;
+  width: auto;
+  background-color: green;
+  color: white;
+  text-shadow: 2px 2px black;
+  height: 47px;
 }
 
 .get-weather-button:hover {

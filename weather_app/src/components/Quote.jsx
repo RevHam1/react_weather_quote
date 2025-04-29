@@ -48,8 +48,7 @@ function QuoteComponent() {
       // If no suitable quote is found after the maximum retries, set a fallback message
       if (!foundQuote) {
         setQuote({
-          quote:
-            "No quote found within the length limit after several attempts.",
+          quote: "No quote found! Never give up. Just RESET amd try again...",
         });
       }
       // 2. Catch and display Failed to load uote
