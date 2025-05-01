@@ -1,19 +1,13 @@
+/* ========== Base Styles ========== */
 .quote-container {
   text-align: center;
   padding: 20px;
 }
 
 .quote-container h3 {
-  text-shadow: 2px 2px 4px black;
-}
-
-/* .quote-content {
-  padding: 10px;
-} */
-
-h3 {
-  font-size: 60px;
+  font-size: 55px;
   margin-top: -10px;
+  text-shadow: 2px 2px 4px black;
 }
 
 .quote {
@@ -29,99 +23,53 @@ h3 {
   text-shadow: 2px 2px 4px black;
 }
 
-/* Media Queries */
+/* ========== Media Queries ========== */
 
-/* Small devices (phones, 600px and down) */
+/* ---- Small Devices (≤600px) ---- */
 @media (max-width: 600px) {
-  .quote-content {
+  .quote-container h3 {
+    font-size: 22px;
+  }
+
+  .quote-container .quote {
+    font-size: 14px;
+    text-shadow: 2px 2px 4px black, 2px 2px 0 green;
     width: 100%;
   }
 
-  h3 {
-    font-size: 18px;
-    margin-top: -10px;
-  }
-
-  div .quote {
-    font-size: 12px;
-    text-shadow: 2px 2px 4px black, 2px 2px 0px green;
-    width: 100%;
-    /* padding: 0px 60px; */
-  }
-
-  div .quote-author {
+  .quote-container .quote-author {
     font-size: 10px;
   }
 }
 
-/* Medium devices (tablets, 601px to 900px) */
+/* ---- Medium Devices (601px–900px) ---- */
 @media (min-width: 601px) and (max-width: 900px) {
-  /* .quote-content {
-    width: 80%; 
-  } */
-
-  /* div .quote-content {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-  } */
-
-  .quote-container div .quote {
+  .quote {
     font-size: 35px;
     width: 100%;
   }
 
-  div .quote-author {
+  .quote-author {
     font-size: 20px;
     width: 100%;
   }
 }
 
-/* Medium devices (laptops/desktops, 901px to 1200px) */
+/* ---- Large Tablets & Laptops (901px–1200px) ---- */
 @media (min-width: 901px) and (max-width: 1200px) {
-  /* .quote {
-    font-size: 30px;
-    width: 100%;
-  } */
-
-  /* div .quote-content {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-  } */
-
-  /* .quote-container div .quote {
-    font-size: 46px;
-    width: 90%;
-    text-align: center;
-  } */
-
-  div .quote {
+  .quote {
     font-size: 42px;
-    /* width: 80%; */
-    /* font-style: italic;
-    color: white;
-    text-shadow: 2px 2px 4px black; */
   }
-
-  /* div .quote-author {
-    font-size: 35px;
-    width: 90%;
-  } */
 }
 
-/* Large devices (1200px and above) */
-@media (min-width: 1200px) {
-  #quote-container div .quote {
+/* ---- Desktops (≥1201px) ---- */
+@media (min-width: 1201px) {
+  .quote {
     font-size: 42px;
-    /* width: 80%; */
     text-align: center;
   }
 
-  #quote-container div .quote-author {
-    font-size: 1.5vw; /* Use relative units for font-size */
-    /* width: 80%; */
+  .quote-author {
+    font-size: 1.5vw;
   }
 }

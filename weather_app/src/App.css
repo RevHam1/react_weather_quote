@@ -183,7 +183,7 @@ h4 {
   .hero h1 {
     margin-top: -100px;
     margin-bottom: 15px;
-    font-size: 30px !important;
+    font-size: 32px !important;
   }
 
   div input {
@@ -196,7 +196,7 @@ h4 {
 
   div .input-button {
     height: 36px;
-    margin-top: 10px !important;
+    margin-top: 18px !important;
     margin-bottom: 10px !important;
     font-size: 12px !important;
   }
@@ -349,7 +349,7 @@ h4 {
   .hero .reset {
     font-size: 15px !important;
     width: auto !important;
-    margin-top: 0px;
+    margin-top: 40px;
   }
 }
 
@@ -457,7 +457,7 @@ h4 {
 /* Large devices (laptops/desktops, 901px to 1200px) */
 @media (min-width: 901px) and (max-width: 1200px) {
   .content h1 {
-    font-size: 115px;
+    font-size: 120px;
     margin-top: -80px;
   }
 
