@@ -84,12 +84,68 @@ h4 {
   text-shadow: 2px 2px 4px black;
 }
 
+/* *** START Here Day Weather Card setup*** */
+.cutbottom {
+  font-size: 20px;
+  margin-bottom: 0; /* Removes default bottom spacing */
+  padding-bottom: 0; /* Optional: also remove padding */
+}
+
+.small-grid {
+  font-size: 28px !important;
+  text-shadow: 2px 2px 4px black, 2px 2px 0px green;
+  margin-bottom: 0 !important; /* Prevent unintended spacing */
+}
+
+.super-small-grid {
+  font-size: 20px !important;
+  text-shadow: 2px 2px 4px black, 2px 2px 0px green;
+  margin-bottom: 0 !important; /* Ensure consistent spacing */
+}
+
+/* Optional: Ensure forecast cards are uniform */
+.forcast5 {
+  min-height: 120px; /* Adjust based on your design */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ensure the container doesn't add space when wrapping */
+.forecast-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start; /* align to top to avoid bottom gaps */
+  gap: 10px; /* cleaner spacing between items */
+  margin: 0 auto;
+}
+
+/* Ensure consistent size and no spacing artifacts */
+.forecast-card {
+  box-sizing: border-box;
+  min-width: 100px; /* adjust as needed */
+  max-width: 200px;
+  padding: 0px;
+  /* background: #222; */
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+}
+/* *** End *** */
+
 .forcast5 {
   padding: 2px 10px;
-  border: 2px dashed white;
   margin-bottom: 55px;
 }
+
+.forecast-title {
+  font-size: 38px;
+}
+
 .hero .reset {
+  margin-top: 50px;
   color: white;
   background-color: blue;
   padding: 10px 20px;
@@ -114,7 +170,7 @@ h4 {
     align-items: center;
     display: flex;
     height: 110vh;
-    width: 100vw;
+    width: 100vw !important;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -124,9 +180,9 @@ h4 {
   }
 
   .hero h1 {
-    margin-top: -50px;
+    margin-top: -100px;
     margin-bottom: 15px;
-    font-size: 40px !important;
+    font-size: 35px !important;
   }
 
   div input {
@@ -162,13 +218,9 @@ h4 {
     border: none;
   }
 
-  #get-weather-conditions {
-    margin-top: 20px;
-  }
-
   .hero h4 {
     font-size: 18px;
-    width: 80%;
+    /* width: 80%; */
     margin-left: 25px;
     margin-top: -5px;
     margin-bottom: 0px;
@@ -192,20 +244,18 @@ h4 {
   }
 
   .forecast-title {
-    font-size: 25px;
-    width: 80%;
-    margin-left: 18px;
-    margin-top: 8px;
+    font-size: 20 px;
+    margin-top: 10px;
     margin-bottom: -2px;
   }
 
   div .hero .feels-like {
     font-size: 16px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   .hero .forecast-description {
-    font-size: 20px;
+    font-size: 10px;
   }
 
   .hero .weather-icon-position {
@@ -225,19 +275,80 @@ h4 {
     /* padding-left: 2.5px; */
   }
 
+  /* Here Day Weather Card setup */
   .hero .cutbottom {
-    /* font-size: 10px; */
-    margin-bottom: -7px;
+    font-size: 10px;
+    margin-bottom: 0; /* Removes default bottom spacing */
+    padding-bottom: 0; /* Optional: also remove padding */
   }
 
   .hero .small-grid {
-    font-size: 20px;
+    font-size: 14px !important;
     text-shadow: 2px 2px 4px black, 2px 2px 0px green;
+    margin-bottom: 0 !important; /* Prevent unintended spacing */
   }
 
   .hero .super-small-grid {
-    font-size: 7px;
+    font-size: 10px !important;
     text-shadow: 2px 2px 4px black, 2px 2px 0px green;
+    margin-bottom: 0 !important; /* Ensure consistent spacing */
+  }
+
+  /* Optional: Ensure forecast cards are uniform */
+  .hero .forcast5 {
+    min-height: 120px; /* Adjust based on your design */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Ensure the container doesn't add space when wrapping */
+  .forecast-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* align to top to avoid bottom gaps */
+    gap: 10px; /* cleaner spacing between items */
+    margin: 0 auto;
+  }
+
+  /* Ensure consistent size and no spacing artifacts */
+  .forecast-card {
+    box-sizing: border-box;
+    min-width: 100px; /* adjust as needed */
+    max-width: 150px;
+    padding: 0px;
+    /* background: #222; */
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  /* Reset all unwanted spacing */
+  .forecast-card p {
+    margin: 0;
+    padding: 0px 0px;
+  }
+
+  /* .hero .cutbottom {
+    font-size: 10px;
+  } */
+
+  /* .hero .small-grid {
+    font-size: 14px !important;
+    text-shadow: 2px 2px 4px black, 2px 2px 0px green;
+  } */
+
+  /* .hero .super-small-grid {
+    font-size: 10px !important;
+    text-shadow: 2px 2px 4px black, 2px 2px 0px green;
+  } */
+
+  .hero .reset {
+    font-size: 15px !important;
+    width: auto !important;
+    margin-top: 10px;
   }
 }
 

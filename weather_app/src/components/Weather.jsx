@@ -414,8 +414,11 @@ function WeatherApp() {
           <div>
             <div className="forecast-details">
               <h2 className="forecast-title">
-                Today&apos;s Forecast for {weatherInfo.name}
-                {weatherInfo.state && ` ${weatherInfo.state}`}
+                Today&apos;s Forecast <br />{" "}
+                <small>
+                  for {weatherInfo.name}
+                  {weatherInfo.state && ` ${weatherInfo.state}`}
+                </small>
               </h2>
 
               <p className="forecast-description">
@@ -458,12 +461,31 @@ function WeatherApp() {
 
               {forecast && (
                 <div style={{ marginBottom: "-20px", paddingBottom: "-20px" }}>
-                  <h2>
-                    5-Day Forecast for {forecast.city.name}{" "}
-                    {forecast.state && ` ${forecast.state}`}
-                  </h2>
+                  <h2 className="forecast-title">5-Day Forecast</h2>
 
-                  <div
+                  {/* ***For small phone set up*** */}
+                  <div className="forecast-wrapper">
+                    {forecast.list
+                      .filter((_, index) => index % 8 === 0)
+                      .map((item, index) => (
+                        <div key={index} className="forecast-card">
+                          <p className="cutbottom small-grid">
+                            {new Date(item.dt_txt).toLocaleDateString("en-US", {
+                              weekday: "short",
+                            })}
+                          </p>
+                          <p className="cutbottom super-small-grid">
+                            {item.weather[0].description}
+                          </p>
+                          <p className="temp cutbottom small-grid">
+                            {Math.round(item.main.temp)}°F
+                          </p>
+                        </div>
+                      ))}
+                  </div>
+
+                  {/* ***For everyother size*** */}
+                  {/* <div
                     style={{
                       display: "flex",
                       justifyContent: "center",
@@ -490,7 +512,9 @@ function WeatherApp() {
                           </div>
                         </div>
                       ))}
-                  </div>
+                  </div> */}
+
+                  {/* ***Break*** */}
                 </div>
               )}
             </div>
