@@ -1,4 +1,4 @@
-/* Base styles */
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -12,31 +12,15 @@
   text-align: center;
 }
 
-/* .hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 150vh;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  text-align: center;
-  color: white;
-  text-shadow: 2px 2px 4px black;
-} */
-
 .hero {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  display: flex;
   height: 150vh;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  /* background-repeat: no-repeat; */
-
   text-align: center;
 }
 
@@ -59,24 +43,22 @@ h4 {
 
 .content p {
   font-size: 22px;
-  margin: 0px 0;
   letter-spacing: 2px;
 }
 
-.city-input {
+.city-input,
+.input-button {
   margin: 1rem;
-  width: 21%;
   height: 45px;
-  justify-content: center;
-  align-items: center;
   text-align: center;
+}
+
+.city-input {
+  width: 21%;
 }
 
 .input-button {
   width: 20%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 #quote {
@@ -85,60 +67,52 @@ h4 {
   text-shadow: 2px 2px 4px black;
 }
 
-/* *** START Here Day Weather Card setup*** */
+.cutbottom,
+.small-grid,
+.super-small-grid {
+  margin-bottom: 0;
+  text-shadow: 2px 2px 4px black, 2px 2px 0 green;
+}
+
 .cutbottom {
   font-size: 20px;
-  margin-bottom: 0; /* Removes default bottom spacing */
-  padding-bottom: 0; /* Optional: also remove padding */
 }
 
 .small-grid {
-  font-size: 28px !important;
-  text-shadow: 2px 2px 4px black, 2px 2px 0px green;
-  margin-bottom: 0 !important; /* Prevent unintended spacing */
+  font-size: 28px;
 }
 
 .super-small-grid {
-  font-size: 20px !important;
-  text-shadow: 2px 2px 4px black, 2px 2px 0px green;
-  margin-bottom: 0 !important; /* Ensure consistent spacing */
+  font-size: 20px;
 }
 
-/* Optional: Ensure forecast cards are uniform */
 .forcast5 {
-  min-height: 120px; /* Adjust based on your design */
+  min-height: 120px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 2px 10px;
+  margin-bottom: 55px;
 }
 
-/* Ensure the container doesn't add space when wrapping */
 .forecast-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start; /* align to top to avoid bottom gaps */
-  gap: 10px; /* cleaner spacing between items */
+  align-items: flex-start;
+  gap: 10px;
   margin: 0 auto;
 }
 
-/* Ensure consistent size and no spacing artifacts */
 .forecast-card {
   box-sizing: border-box;
-  min-width: 100px; /* adjust as needed */
+  min-width: 100px;
   max-width: 200px;
-  padding: 0px;
-  /* background: #222; */
+  padding: 0;
   color: white;
   border-radius: 8px;
   text-align: center;
-}
-/* *** End *** */
-
-.forcast5 {
-  padding: 2px 10px;
-  margin-bottom: 55px;
 }
 
 .forecast-title {
@@ -155,209 +129,74 @@ h4 {
   cursor: pointer;
 }
 
-/* Media Queries */
-
-/* Small devices (phones, 600px and down)  - portrait*/
+/* Media Queries: phones portrait */
 @media (max-width: 600px) and (orientation: portrait) {
-  /* .hero {
-    height: 100vh;
-    background-size: contain;
-    background-position: center top;
-  } */
-
-  .hero {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    height: 140vh;
-    width: 100vw !important;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    /* background-repeat: no-repeat; */
-
-    text-align: center;
-  }
-
-  .hero h1 {
-    margin-top: -100px;
-    margin-bottom: 15px;
-    font-size: 32px !important;
-  }
-
-  div input {
-    width: 28% !important;
-    height: 5px;
-    margin-bottom: 50px;
-    margin-right: 0px !important;
-    font-size: 16px !important;
-  }
-
-  div .input-button {
-    height: 36px;
-    margin-top: 18px !important;
-    margin-bottom: 10px !important;
-    font-size: 12px !important;
-  }
-
-  .hero .content h1 {
-    font-size: 24px;
-  }
-
-  .content p {
-    font-size: 18px;
-  }
-
   .conditions-always-change {
     display: none;
   }
 
-  .grid-con {
-    display: grid;
-    grid-gap: 5px;
-    border: none;
+  .hero {
+    height: 140vh;
+    width: 100vw !important;
   }
 
-  .hero h4 {
-    font-size: 18px;
-    /* width: 80%; */
-    margin-left: 25px;
-    margin-top: -5px;
-    margin-bottom: 0px;
+  .hero h1,
+  .hero .content h1 {
+    font-size: 30px !important;
+    margin-top: -100px;
+    margin-bottom: 15px;
   }
 
-  .hero .city-input {
-    font-size: 20px;
-    padding: 0.25rem;
-    border-radius: 10px;
+  .city-input,
+  .input-button {
     width: 60%;
-    margin-top: -20px;
-    margin-bottom: -20px;
-  }
-
-  .hero .input-button {
     font-size: 18px;
     padding: 0.25rem;
     border-radius: 10px;
-    width: 50%;
     margin-top: -20px;
+  }
+
+  .input-button {
+    width: 50%;
   }
 
   .forecast-title {
-    font-size: 20 px;
-    margin-top: 10px;
-    margin-bottom: -2px;
+    font-size: 20px;
+    margin: 10px 0 -2px;
   }
 
-  div .hero .feels-like {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-
-  .hero .forecast-description {
+  .cutbottom {
     font-size: 10px;
   }
 
-  .hero .weather-icon-position {
-    display: none;
-  }
-
-  .my-reset-btn {
-    background-color: red;
-    color: white;
-    padding: 10px;
-  }
-
-  div .my-reset-btn {
-    width: auto !important;
-    font-size: 12px;
-    border-radius: 10px;
-    /* padding-left: 2.5px; */
-  }
-
-  /* Here Day Weather Card setup */
-  .hero .cutbottom {
-    font-size: 10px;
-    margin-bottom: 0; /* Removes default bottom spacing */
-    padding-bottom: 0; /* Optional: also remove padding */
-  }
-
-  .hero .small-grid {
+  .small-grid {
     font-size: 14px !important;
-    text-shadow: 2px 2px 4px black, 2px 2px 0px green;
-    margin-bottom: 0 !important; /* Prevent unintended spacing */
   }
 
-  .hero .super-small-grid {
+  .super-small-grid {
     font-size: 10px !important;
-    text-shadow: 2px 2px 4px black, 2px 2px 0px green;
-    margin-bottom: 0 !important; /* Ensure consistent spacing */
   }
 
-  /* Optional: Ensure forecast cards are uniform */
-  .hero .forcast5 {
-    min-height: 120px; /* Adjust based on your design */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* Ensure the container doesn't add space when wrapping */
-  .forecast-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start; /* align to top to avoid bottom gaps */
-    gap: 10px; /* cleaner spacing between items */
-    margin: 0 auto;
-  }
-
-  /* Ensure consistent size and no spacing artifacts */
   .forecast-card {
-    box-sizing: border-box;
-    min-width: 100px; /* adjust as needed */
     max-width: 150px;
-    padding: 0px;
-    /* background: #222; */
-    color: white;
-    border-radius: 8px;
-    text-align: center;
   }
 
-  /* Reset all unwanted spacing */
   .forecast-card p {
     margin: 0;
-    padding: 0px 0px;
+    padding: 0;
   }
 
-  /* .hero .cutbottom {
-    font-size: 10px;
-  } */
-
-  /* .hero .small-grid {
-    font-size: 14px !important;
-    text-shadow: 2px 2px 4px black, 2px 2px 0px green;
-  } */
-
-  /* .hero .super-small-grid {
-    font-size: 10px !important;
-    text-shadow: 2px 2px 4px black, 2px 2px 0px green;
-  } */
-
-  .hero .reset {
+  .reset {
     font-size: 15px !important;
     width: auto !important;
-    margin-top: 40px;
+    margin-top: 0;
   }
 }
 
-/* Small devices (phones, 740px and down) - Landscape */
+/* Media Queries: phones landscape */
 @media (max-width: 740px) and (orientation: landscape) {
   .hero {
     height: 78vh;
-    background-size: cover;
   }
 
   .hero .content h1 {
@@ -368,126 +207,49 @@ h4 {
     font-size: 18px;
   }
 
-  .conditions-always-change {
-    display: none;
-  }
-
-  .grid-con {
-    display: grid;
-    grid-gap: 5px;
-    border: none;
-  }
-
-  #get-weather-conditions {
-    margin-top: 20px;
-  }
-
-  .hero h4 {
-    font-size: 24px;
-    margin-left: 33px;
-    margin-top: -8px;
-    margin-bottom: -3px;
-  }
-
-  .hero .city-input {
+  .city-input {
     font-size: 18px;
-    padding: 0.25rem;
-    border-radius: 10px;
     width: 31%;
-    margin-top: -20px;
-    margin-bottom: -20px;
   }
 
-  div .hero .input-button {
+  .input-button {
     font-size: 16px;
-    padding: 0.25rem;
-    border-radius: 10px;
     width: 22%;
   }
 
-  div .forecast-title {
-    width: 100%;
-    margin-left: 15%;
-    margin-bottom: -8px;
+  .forecast-title {
     font-size: 32px;
+    margin-left: 15%;
   }
 
-  .hero .forecast-description {
-    margin-left: 30%;
+  .forecast-description,
+  .feels-like {
     font-size: 22px;
-  }
-
-  .hero .weather-icon-position {
-    display: none;
-  }
-
-  div .hero .feels-like {
-    margin-top: -8px;
     margin-left: 30%;
-    font-size: 16px;
-    margin-bottom: 10px;
   }
 
-  .hero .reset {
+  .reset {
     width: 20%;
     font-size: 14px;
-    border-radius: 10px;
-  }
-
-  .hero .cutbottom {
-    margin-bottom: -7px;
-  }
-
-  .hero .small-grid {
-    font-size: 20px;
-  }
-
-  .hero .super-small-grid {
-    font-size: 10px;
   }
 
   .alerts {
-    width: 100%;
     margin-left: 40px;
-    margin-top: -10px;
-    margin-bottom: -5px;
   }
 }
 
-/* Large devices (laptops/desktops, 901px to 1200px) */
+/* Media Queries: medium to large screens */
 @media (min-width: 901px) and (max-width: 1200px) {
   .content h1 {
-    font-size: 120px;
+    font-size: 115px;
     margin-top: -80px;
   }
 
-  .hero .conditions-always-change {
-    width: 100%;
+  .conditions-always-change,
+  .weather-icon-position,
+  .forecast-description,
+  .feels-like {
     font-size: 30px;
-  }
-
-  .hero .weather-icon-position {
-    width: 110%;
-    /* padding-left: 100px; */
-    margin-bottom: 50px;
-  }
-
-  .hero .forecast-description {
-    width: 110%;
-    font-size: 40px;
-  }
-
-  div .hero .feels-like {
-    width: 110%;
-    font-size: 36px;
-  }
-
-  .content p {
-    font-size: 21px;
-  }
-
-  .hero {
-    height: 130vh;
   }
 
   .city-input {
@@ -496,17 +258,13 @@ h4 {
     height: 60px;
   }
 
-  .hero .input-button {
+  .input-button {
     width: 30%;
-    height: auto;
     font-size: 40px;
-    margin-bottom: 70px;
   }
 
   h4 {
-    margin-top: -40px;
     font-size: 190px;
-    width: 100%;
   }
 
   #quote {
@@ -514,7 +272,7 @@ h4 {
   }
 }
 
-/* Extra Large devices (1200px and above) */
+/* Extra large screen adjustments */
 .hero .small-grid {
   font-size: 25px;
 }
@@ -525,30 +283,16 @@ h4 {
   margin: -5px 0;
 }
 
-.hero .city-input {
-  font-size: 25px;
-  padding: 0.75rem;
-  width: 22%;
-}
-
+.hero .city-input,
 .hero .input-button {
-  font-size: 23px;
+  font-size: 25px;
   padding: 0.75rem;
   width: auto;
   margin-bottom: 40px;
 }
 
-.grid-con {
-  display: grid;
-  grid-gap: 5px;
-  border: none;
-}
-
 .hero .reset {
   font-size: 30px;
-  color: white;
-  background-color: blue;
   padding: 0.5rem;
-  width: auto;
   border-radius: 10px;
 }
