@@ -31,16 +31,16 @@
 /* Small devices (phones, 600px and down) */
 @media (max-width: 600px) {
   .lottery-title {
-    font-size: 18px;
+    font-size: 12px;
     /* text-align: center; */
     margin-top: -20px;
     margin-bottom: -20px;
   }
 
   .lottery-number {
-    width: 22px; /* Adjust size as needed */
-    height: 22px; /* Adjust size as needed */
-    font-size: 14px;
+    width: 18px; /* Adjust size as needed */
+    height: 18px; /* Adjust size as needed */
+    font-size: 10px;
     margin: 5px;
   }
 }
