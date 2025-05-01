@@ -66,6 +66,7 @@ h4 {
 .city-input {
   margin: 1rem;
   width: 21%;
+  height: 45px;
   justify-content: center;
   align-items: center;
   text-align: center;
