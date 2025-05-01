@@ -180,7 +180,7 @@ h4 {
   }
 
   .hero h1 {
-    margin-top: -50px;
+    margin-top: -100px;
     margin-bottom: 15px;
     font-size: 35px !important;
   }
@@ -348,7 +348,7 @@ h4 {
   .hero .reset {
     font-size: 15px !important;
     width: auto !important;
-    margin-top: 75px;
+    margin-top: 10px;
   }
 }
 
