@@ -17,7 +17,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 150vh;
+  height: 200vh;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -194,7 +194,7 @@ h4 {
 }
 
 /* Media Queries: phones landscape */
-@media (max-width: 740px) and (orientation: landscape) {
+@media (max-width: 739px) and (orientation: landscape) {
   .hero {
     height: 78vh;
   }
@@ -288,7 +288,7 @@ h4 {
   font-size: 25px;
   padding: 0.75rem;
   width: auto;
-  margin-bottom: 40px;
+  /* margin-bottom: 40px; */
 }
 
 .hero .reset {
