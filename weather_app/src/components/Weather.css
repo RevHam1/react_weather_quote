@@ -1,64 +1,30 @@
-.dynamic-container {
-  display: flex; /* Enables Flexbox */
-  justify-content: center; /* Horizontally centers the content */
-  align-items: center; /* Vertically centers the content */
-  /* margin-top: -100px; */
-
-  width: 100vw;
-  min-height: 100vh; /* Ensure flexibility */
-  overflow-y: auto; /* Enables scrolling */
-  padding-bottom: 200px; /* Reduces space at the top */
-}
-
-/* WeatherApp.css */
-/* .dynamic-container {
-  width: 100vw;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-} */
-
-/* * {
+/* ========== Reset & Base Styles ========== */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} */
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-/* .hero {
-  display: flex;
-  height: 100vh;
-  background-color: black;
-} */
-
-/* body {
-  padding: 2rem;
-  background-color: darkblue;
-
-  color: whitesmoke;
+html,
+body {
+  width: 100vw;
   min-height: 100vh;
+  overflow-y: auto;
+}
+
+/* ========== Layout Container ========== */
+.dynamic-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 2rem;
-} */
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 200px;
+  background-color: #f0f0f0; /* fallback or default bg */
+}
 
-/* div {
-  font-size: 2rem;
-  font-family: "Times New Roman", Times, serif;
-} */
-
-/* h1 {
-  font-size: 5rem;
-} */
-
-/* p .italic-text {
-  font-style: italic;
-  text-align: center;
-  color: white;
-  font-size: 2rem;
-} */
-
+/* ========== Form Elements ========== */
 input {
   font-size: 2rem;
   padding: 0.5rem;
@@ -71,15 +37,72 @@ button {
   font-size: 2rem;
   padding: 0.5rem;
   border-radius: 10px;
-  width: auto;
   background-color: green;
   color: white;
   text-shadow: 2px 2px black;
+  border: none;
   height: 47px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
-.get-weather-button:hover {
-  padding: 1rem;
-  border-radius: 10px;
+button.get-weather-button:hover {
   background-color: #0056b3;
+  padding: 1rem;
+}
+
+/* ========== Responsive Breakpoints (Mobile-First) ========== */
+
+/* --- Small devices: ≤ 600px --- */
+@media (max-width: 600px) {
+  input {
+    width: 80%;
+    font-size: 1.5rem;
+  }
+  button {
+    width: 60%;
+    font-size: 1.5rem;
+  }
+  .dynamic-container {
+    flex-direction: column;
+    padding-bottom: 100px;
+  }
+}
+
+/* --- Medium devices: 601px–900px --- */
+@media (min-width: 601px) and (max-width: 900px) {
+  h1 {
+    font-size: 3.8rem;
+  }
+
+  input {
+    width: 50%;
+    font-size: 1.75rem;
+  }
+  button {
+    width: auto;
+    font-size: 1.75rem;
+  }
+}
+
+/* --- Large devices: 901px–1200px --- */
+@media (min-width: 901px) and (max-width: 1200px) {
+  input {
+    width: 25%;
+    font-size: 2rem;
+  }
+  button {
+    font-size: 2rem;
+  }
+}
+
+/* --- Extra Large devices: ≥ 1201px --- */
+@media (min-width: 1201px) {
+  input {
+    width: 16%;
+    font-size: 2rem;
+  }
+  button {
+    font-size: 2rem;
+  }
 }

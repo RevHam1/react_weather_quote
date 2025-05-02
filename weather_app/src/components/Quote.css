@@ -44,6 +44,10 @@
 
 /* ---- Medium Devices (601px–900px) ---- */
 @media (min-width: 601px) and (max-width: 900px) {
+  .quote-container h3 {
+    font-size: 3rem;
+  }
+
   .quote {
     font-size: 35px;
     width: 100%;
