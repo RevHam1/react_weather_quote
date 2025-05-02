@@ -200,7 +200,7 @@ h4 {
   }
 
   .hero .content h1 {
-    font-size: 30px;
+    font-size: 34px;
   }
 
   .content p {
@@ -287,7 +287,7 @@ h4 {
 .hero .input-button {
   font-size: 25px;
   padding: 0.75rem;
-  width: 35%;
+  width: auto;
   /* margin-bottom: 40px; */
 }
 
